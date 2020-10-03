@@ -17,5 +17,13 @@ public class FindMaximum {
 			max=c;
 		return max;
 	}
+	public static String findMaxString(String a,String b,String c) {
+		String max=a;
+		if(b.compareToIgnoreCase(max)>0)
+			max=b;
+		if(c.compareToIgnoreCase(max)>0)
+			max=c;
+		return max;
+	}
 
 }

@@ -37,5 +37,20 @@ public class TestMaximum {
 		Float a=FindMaximum.findMaxFloat(-1.71f,-1.21f,-1.11f);
 		assertEquals(-1.11f, a.floatValue(),0.01f);
 	}
+	@Test
+	public void givenMaxStringValueAtFirst_ReturnsMaxValue() {
+		String a=FindMaximum.findMaxString("peach","apple", "banana");
+		assertEquals("peach",a);
+	}
+	@Test
+	public void givenMaxStringValueAtSecond_ReturnsMaxValue() {
+		String a=FindMaximum.findMaxString("apple","peach","banana");
+		assertEquals("peach",a);
+	}
+	@Test
+	public void givenMaxStringValueAtThird_ReturnsMaxValue() {
+		String a=FindMaximum.findMaxString("apple","banana","peach");
+		assertEquals("peach",a);
+		}
 
 }
