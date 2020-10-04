@@ -26,10 +26,16 @@ public class FindMaximum<E extends Comparable<E>>{
 			if(element.compareTo(max)>0)
 			max=element;
 		}
+		printMax(max);
 		return max;
 	}
 	public E findMaxBySorting() {
-		return arr.stream().sorted((i,j)->i.compareTo(j)).sorted(Comparator.reverseOrder()).findFirst().orElse(null);
+		E max= arr.stream().sorted((i,j)->i.compareTo(j)).sorted(Comparator.reverseOrder()).findFirst().orElse(null);
+		printMax(max);
+		return max;
+	}
+	public void printMax(E a) {
+		System.out.println(a);
 	}
 
 }
