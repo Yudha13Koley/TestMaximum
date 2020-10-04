@@ -5,51 +5,106 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class TestMaximum {
 
-	@Test
+public class TestMaximum {
+		
+		@Test
 	public void givenMaxIntValueAtFirst_ReturnsMaxValue() {
-		Integer a=new FindMaximum<Integer>(10,5,2).findMax();
-		assertEquals(10, a.intValue());
+		FindMaximum<Integer> fm=new FindMaximum<Integer>();
+		Integer arr[]= {100,5,2,6,7,8,5,14,13,11,8};
+		for(Integer i: arr)
+		{
+			fm.addInputs(i);
+		}
+		Integer a=fm.findMaxBySorting();
+		assertEquals(100, a.intValue());
 	}
 	@Test
 	public void givenMaxIntValueAtSecond_ReturnsMaxValue() {
-		Integer a=new FindMaximum<Integer>(2,6,5).findMax();
-		assertEquals(6, a.intValue());
+		FindMaximum<Integer> fm=new FindMaximum<Integer>();
+		Integer arr[]= {10,20,2,6,7,8,5,14,13,11,8};
+		for(Integer i: arr)
+		{
+			fm.addInputs(i);
+		}
+		Integer a=fm.findMaxBySorting();
+		assertEquals(20, a.intValue());
 	}
 	@Test
 	public void givenMaxIntValueAtThird_ReturnsMaxValue() {
-		Integer a=new FindMaximum<Integer>(-3,-6,-2).findMax();
-		assertEquals(-2, a.intValue());
+		FindMaximum<Integer> fm=new FindMaximum<Integer>();
+		Integer arr[]= {10,20,23,6,7,8,5,14,13,11,8};
+		for(Integer i: arr)
+		{
+			fm.addInputs(i);
+		}
+		Integer a=fm.findMaxBySorting();
+		assertEquals(23, a.intValue());
 	}
 	@Test
 	public void givenMaxFloatValueAtFirst_ReturnsMaxValue() {
-		Float a=new FindMaximum<Float>(10.08f,10.01f,10.00f).findMax();
+		FindMaximum<Float> fm=new FindMaximum<Float>();
+		Float arr[]= {10.08f,10.01f,10.00f,10.07f,10.06f};
+		for(Float i: arr)
+		{
+			fm.addInputs(i);
+		}
+		Float a=fm.findMaxBySorting();
 		assertEquals(10.08f,a.floatValue(),0.01f);
 	}
 	@Test
 	public void givenMaxFloatValueAtSecond_ReturnsMaxValue() {
-		Float a=new FindMaximum<Float>(5.2552f,5.343f,5.234f).findMax();
-		assertEquals(5.343f, a.floatValue(),0.001f);
+		FindMaximum<Float> fm=new FindMaximum<Float>();
+		Float arr[]= {10.08f,10.11f,10.00f,10.07f,10.06f};
+		for(Float i: arr)
+		{
+			fm.addInputs(i);
+		}
+		Float a=fm.findMaxBySorting();
+		assertEquals(10.11f,a.floatValue(),0.01f);
 	}
 	@Test
 	public void givenMaxFloatValueAtThird_ReturnsMaxValue() {
-		Float a=new FindMaximum<Float>(-1.71f,-1.21f,-1.11f).findMax();
-		assertEquals(-1.11f, a.floatValue(),0.01f);
+		FindMaximum<Float> fm=new FindMaximum<Float>();
+		Float arr[]= {10.08f,10.01f,10.11f,10.07f,10.06f};
+		for(Float i: arr)
+		{
+			fm.addInputs(i);
+		}
+		Float a=fm.findMaxBySorting();
+		assertEquals(10.11f,a.floatValue(),0.01f);
 	}
 	@Test
 	public void givenMaxStringValueAtFirst_ReturnsMaxValue() {
-		String a=new FindMaximum<String>("peach","apple", "banana").findMax();
+		FindMaximum<String> fm=new FindMaximum<String>();
+		String arr[]= {"peach","apple","banana"};
+		for(String i: arr)
+		{
+			fm.addInputs(i);
+		}
+		String a=fm.findMaxBySorting();
 		assertEquals("peach",a);
 	}
 	@Test
 	public void givenMaxStringValueAtSecond_ReturnsMaxValue() {
-		String a= new FindMaximum<String>("apple","peach","banana").findMax();
+		FindMaximum<String> fm=new FindMaximum<String>();
+		String arr[]= {"apple","peach","banana"};
+		for(String i: arr)
+		{
+			fm.addInputs(i);
+		}
+		String a=fm.findMaxBySorting();
 		assertEquals("peach",a);
 	}
 	@Test
 	public void givenMaxStringValueAtThird_ReturnsMaxValue() {
-		String a=new FindMaximum<String>("apple","banana","peach").findMax();
+		FindMaximum<String> fm=new FindMaximum<String>();
+		String arr[]= {"banana","apple","peach"};
+		for(String i: arr)
+		{
+			fm.addInputs(i);
+		}
+		String a=fm.findMaxBySorting();
 		assertEquals("peach",a);
 		}
 
