@@ -9,47 +9,47 @@ public class TestMaximum {
 
 	@Test
 	public void givenMaxIntValueAtFirst_ReturnsMaxValue() {
-		Integer a=FindMaximum.findMaxInt(10,5,2);
+		Integer a=FindMaximum.<Integer>findMax(10,5,2);
 		assertEquals(10, a.intValue());
 	}
 	@Test
 	public void givenMaxIntValueAtSecond_ReturnsMaxValue() {
-		Integer a=FindMaximum.findMaxInt(5,7,2);
+		Integer a=FindMaximum.<Integer>findMax(5,7,2);
 		assertEquals(7, a.intValue());
 	}
 	@Test
 	public void givenMaxIntValueAtThird_ReturnsMaxValue() {
-		Integer a=FindMaximum.findMaxInt(-7,-5,-2);
+		Integer a=FindMaximum.<Integer>findMax(-7,-5,-2);
 		assertEquals(-2, a.intValue());
 	}
 	@Test
 	public void givenMaxFloatValueAtFirst_ReturnsMaxValue() {
-		Float a=FindMaximum.findMaxFloat(10.08f,10.01f,10.00f);
+		Float a=FindMaximum.<Float>findMax(10.08f,10.01f,10.00f);
 		assertEquals(10.08f,a.floatValue(),0.01f);
 	}
 	@Test
 	public void givenMaxFloatValueAtSecond_ReturnsMaxValue() {
-		Float a=FindMaximum.findMaxFloat(5.2552f,5.343f,5.234f);
+		Float a=FindMaximum.<Float>findMax(5.2552f,5.343f,5.234f);
 		assertEquals(5.343f, a.floatValue(),0.001f);
 	}
 	@Test
 	public void givenMaxFloatValueAtThird_ReturnsMaxValue() {
-		Float a=FindMaximum.findMaxFloat(-1.71f,-1.21f,-1.11f);
+		Float a=FindMaximum.<Float>findMax(-1.71f,-1.21f,-1.11f);
 		assertEquals(-1.11f, a.floatValue(),0.01f);
 	}
 	@Test
 	public void givenMaxStringValueAtFirst_ReturnsMaxValue() {
-		String a=FindMaximum.findMaxString("peach","apple", "banana");
+		String a=FindMaximum.<String>findMax("peach","apple", "banana");
 		assertEquals("peach",a);
 	}
 	@Test
 	public void givenMaxStringValueAtSecond_ReturnsMaxValue() {
-		String a=FindMaximum.findMaxString("apple","peach","banana");
+		String a=FindMaximum.<String>findMax("apple","peach","banana");
 		assertEquals("peach",a);
 	}
 	@Test
 	public void givenMaxStringValueAtThird_ReturnsMaxValue() {
-		String a=FindMaximum.findMaxString("apple","banana","peach");
+		String a=FindMaximum.<String>findMax("apple","banana","peach");
 		assertEquals("peach",a);
 		}
 
