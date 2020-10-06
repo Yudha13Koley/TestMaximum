@@ -5,12 +5,6 @@
 build
 .classpath
 .settings/
-build.gradle
-gradlew
-settings.gradle
-.gradle/
-gradle/
 .project
 .gitattributes
-gradlew.bat
 bin/
